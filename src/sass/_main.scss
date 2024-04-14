@@ -39,9 +39,9 @@ $text-color-main: #232323;
     padding: 20px 24px;
     background: transparent;
     border: 1px solid $text-color-main;
-    transition: .23s;
+    transition: 0.23s;
     cursor: pointer;
-    
+
     &:hover {
       background: #fff;
       border: #fff 1px solid;
