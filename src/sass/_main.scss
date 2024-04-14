@@ -1,0 +1,111 @@
+$font-stack: "Montserrat", sans-serif;
+$text-color-main: #232323;
+
+.main {
+  font-family: $font-stack;
+  color: $text-color-main;
+
+  &__container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  &__number1 {
+    border-radius: 67px;
+    border: 1px solid $text-color-main;
+    padding: 11px 57px 11px 24px;
+    width: 76%;
+    font-size: 12px;
+
+    font-weight: 600;
+    margin-bottom: 47px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 36px;
+    margin-bottom: 22px;
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  &__btn {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 20px 24px;
+    background: transparent;
+    border: 1px solid $text-color-main;
+    transition: .23s;
+    cursor: pointer;
+    
+    &:hover {
+      background: #fff;
+      border: #fff 1px solid;
+    }
+  }
+  &__btn-box {
+    margin-bottom: 216px;
+  }
+
+  &__sub-container {
+    padding: 0 16px;
+    margin-bottom: 99px;
+  }
+
+  &__line {
+    height: 1px;
+    background: $text-color-main;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 706px) {
+  .main {
+    &__title {
+      font-size: 50px;
+    }
+    &__text {
+      font-size: 18px;
+    }
+    &__number1 {
+      font-size: 13px;
+    }
+    &__text-box {
+      width: 90%;
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .main {
+    &__text-box {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 1153px) {
+  .main {
+    &__container {
+      max-width: 1120px;
+      padding: 0;
+      margin: 0 auto;
+    }
+    &__title {
+      font-size: 80px;
+    }
+    &__text {
+      font-size: 20px;
+    }
+    &__number1 {
+      font-size: 14px;
+    }
+    &__text-box {
+      width: 68%;
+    }
+  }
+}

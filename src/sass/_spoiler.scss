@@ -1,0 +1,50 @@
+$text-color-main: #232323;
+
+.spoiler {
+  display: flex;
+  justify-content: space-between;
+
+  &__content {
+    flex: 0 1 78%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__btn {
+    width: 32px;
+    height: 32px;
+    background: $text-color-main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 99px;
+    transition: 0.3s;
+    transform: rotate(0deg);
+    cursor: pointer;
+  }
+}
+
+.spoiler.active {
+  .spoiler__content {
+    opacity: 1;
+    visibility: visible;
+  }
+  .spoiler__btn {
+    transform: rotate(180deg);
+  }
+}
+
+@media (min-width: 706px) {
+  .spoiler {
+    &__content {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 1153px) {
+  .spoiler {
+    &__content {
+      font-size: 20px;
+    }
+  }
+}

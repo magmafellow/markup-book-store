@@ -1,0 +1,44 @@
+@use "reset";
+@use "header";
+@use "main";
+@use "spoiler";
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: nowrap column;
+  background: #F8F6F1;
+}
+
+.header-main-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.header {
+  position: relative;
+  z-index: 3;
+}
+.main  {
+  position: relative;
+  z-index: 2;
+}
+
+.green-ellipse, .orange-ellipse {
+  width: 70%;
+  min-width: 1000px;
+  position: absolute;
+  z-index: 1;
+}
+.green-ellipse {
+  bottom: 0;
+  left: -100px;
+}
+.orange-ellipse {
+  bottom: 0;
+  right: -100px;
+}
+
+
+.main {
+  flex: 1 1 auto;
+}
