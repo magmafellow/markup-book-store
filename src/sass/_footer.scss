@@ -1,0 +1,207 @@
+$font-stack: "Montserrat", sans-serif;
+$text-color-main: #232323;
+$main-color-bg: #f8f6f1;
+
+.footer {
+  font-family: $font-stack;
+  color: $text-color-main;
+  background: $main-color-bg;
+
+  &__container {
+    width: 100%;
+    padding: 0 32px;
+  }
+
+  &__nav-box {
+    margin-top: 40px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    margin-bottom: 54px;
+    border-top: 1px solid $text-color-main;
+    border-bottom: 1px solid $text-color-main;
+    display: flex;
+    flex-flow: nowrap column;
+    gap: 40px;
+  }
+
+  &__company-name {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+
+    a {
+      color: $text-color-main;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-flow: nowrap column;
+    gap: 24px;
+
+    a {
+      color: $text-color-main;
+      text-decoration: none;
+      font-size: 20px;
+      text-transform: capitalize;
+      font-weight: 500;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__circles-box {
+    display: flex;
+    gap: 16px;
+
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #ffa04a;
+      width: 48px;
+      height: 48px;
+      border-radius: 99px;
+      border: 1.5px solid #ffa04a;
+    }
+  }
+
+  &__spoiler {
+    margin-bottom: 54px;
+  }
+
+  &__spoiler-content {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__rights {
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+
+  &__subscribe {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  strong {
+    font-weight: 700;
+  }
+
+  &__form {
+    margin-bottom: 88px;
+
+    div {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    input {
+      flex: 0 1 170px;
+      background: transparent;
+      border: none;
+      width: 100px;
+      font-size: 18px;
+      outline: 1px solid #aaa;
+
+      &:focus {
+        border: none;
+        outline: 1px solid #777;
+        background: #0000001b;
+      }
+    }
+
+    button {
+      border-radius: 8px;
+      background: transparent;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 16px;
+      border: 1px solid $text-color-main;
+      transition: .23s;
+      cursor: pointer;
+
+      &:hover {
+        background: $text-color-main;
+        color: #fff;
+      }
+    }
+
+    label {
+      font-weight: 500;
+      font-size: 20px;
+      position: relative;
+
+      .label-line {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60vw;
+        max-width: 217px;
+        height: 1px;
+        background: $text-color-main;
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .footer {
+    &__nav-box {
+      flex-flow: nowrap row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+@media (min-width: 1050px) {
+  .footer {
+    &__nav-box {
+      justify-content: flex-start;
+    }
+
+    &__list-wrapper {
+      flex: 1 1 auto;
+    }
+
+    &__list {
+      flex-flow: nowrap row;
+      gap: 40px;
+    }
+
+    &__outer-box {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__inner-box {
+      text-align: right;
+    }
+    &__rights {
+      flex: 0 1 400px;
+    }
+    &__inner-box {
+      flex: 0 1 500px;
+    }
+    &__form > div {
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media (min-width: 1185px) {
+  .footer {
+    &__container {
+      max-width: 1184px;
+      margin: 0 auto;
+    }
+  }
+}

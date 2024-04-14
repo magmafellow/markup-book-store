@@ -195,7 +195,7 @@ table {
   border-radius: 67px;
   border: 1px solid #232323;
   padding: 11px 57px 11px 24px;
-  width: 76%;
+  width: 273px;
   font-size: 12px;
   font-weight: 600;
   margin-bottom: 47px;
@@ -246,6 +246,7 @@ table {
   }
   .main__number1 {
     font-size: 13px;
+    width: 300px;
   }
   .main__text-box {
     width: 90%;
@@ -270,6 +271,7 @@ table {
   }
   .main__number1 {
     font-size: 14px;
+    width: 330px;
   }
   .main__text-box {
     width: 68%;
@@ -315,6 +317,181 @@ table {
     font-size: 20px;
   }
 }
+.footer {
+  font-family: "Montserrat", sans-serif;
+  color: #232323;
+  background: #f8f6f1;
+}
+.footer__container {
+  width: 100%;
+  padding: 0 32px;
+}
+.footer__nav-box {
+  margin-top: 40px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  margin-bottom: 54px;
+  border-top: 1px solid #232323;
+  border-bottom: 1px solid #232323;
+  display: flex;
+  flex-flow: nowrap column;
+  gap: 40px;
+}
+.footer__company-name {
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.footer__company-name a {
+  color: #232323;
+  text-decoration: none;
+}
+.footer__company-name a:hover {
+  text-decoration: underline;
+}
+.footer__list {
+  display: flex;
+  flex-flow: nowrap column;
+  gap: 24px;
+}
+.footer__list a {
+  color: #232323;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.footer__list a:hover {
+  text-decoration: underline;
+}
+.footer__circles-box {
+  display: flex;
+  gap: 16px;
+}
+.footer__circles-box a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffa04a;
+  width: 48px;
+  height: 48px;
+  border-radius: 99px;
+  border: 1.5px solid #ffa04a;
+}
+.footer__spoiler {
+  margin-bottom: 54px;
+}
+.footer__spoiler-content {
+  font-size: 24px;
+  font-weight: 500;
+}
+.footer__rights {
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+.footer__subscribe {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.footer strong {
+  font-weight: 700;
+}
+.footer__form {
+  margin-bottom: 88px;
+}
+.footer__form div {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.footer__form input {
+  flex: 0 1 170px;
+  background: transparent;
+  border: none;
+  width: 100px;
+  font-size: 18px;
+  outline: 1px solid #aaa;
+}
+.footer__form input:focus {
+  border: none;
+  outline: 1px solid #777;
+  background: rgba(0, 0, 0, 0.1058823529);
+}
+.footer__form button {
+  border-radius: 8px;
+  background: transparent;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: 1px solid #232323;
+  transition: 0.23s;
+  cursor: pointer;
+}
+.footer__form button:hover {
+  background: #232323;
+  color: #fff;
+}
+.footer__form label {
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;
+}
+.footer__form label .label-line {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60vw;
+  max-width: 217px;
+  height: 1px;
+  background: #232323;
+}
+
+@media (min-width: 767px) {
+  .footer__nav-box {
+    flex-flow: nowrap row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 1050px) {
+  .footer__nav-box {
+    justify-content: flex-start;
+  }
+  .footer__list-wrapper {
+    flex: 1 1 auto;
+  }
+  .footer__list {
+    flex-flow: nowrap row;
+    gap: 40px;
+  }
+  .footer__outer-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__inner-box {
+    text-align: right;
+  }
+  .footer__rights {
+    flex: 0 1 400px;
+  }
+  .footer__inner-box {
+    flex: 0 1 500px;
+  }
+  .footer__form > div {
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 1185px) {
+  .footer__container {
+    max-width: 1184px;
+    margin: 0 auto;
+  }
+}
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -335,6 +512,11 @@ table {
 .main {
   position: relative;
   z-index: 2;
+}
+
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .green-ellipse, .orange-ellipse {

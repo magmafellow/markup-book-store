@@ -2,6 +2,7 @@
 @use "header";
 @use "main";
 @use "spoiler";
+@use "footer";
 
 .wrapper {
   min-height: 100vh;
@@ -21,6 +22,11 @@
 .main  {
   position: relative;
   z-index: 2;
+}
+
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
 }
 
 .green-ellipse, .orange-ellipse {

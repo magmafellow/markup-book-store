@@ -1,6 +1,24 @@
 const spoiler1 = document.querySelector(".spoiler-1");
-const spoilerBtn1 = document.querySelector(".spoiler-1 .spoiler__btn");
+const spoilerBtns = document.querySelectorAll(".spoiler .spoiler__btn");
 
-spoilerBtn1.addEventListener("click", function (e) {
-  spoiler1.classList.toggle("active");
-});
+console.log(spoilerBtns)
+
+if(spoilerBtns instanceof NodeList) {
+  console.log('in if')
+  for (let i = 0; i < spoilerBtns.length; i++) {
+  spoilerBtns[i].addEventListener('click', function(e){
+    if (e.target.matches('img')) {
+      e.target.parentNode.parentNode.classList.toggle('active')
+    }
+    e.target.parentNode.classList.toggle('active')
+  })
+}
+} else {
+  console.log('in else')
+  spoilerBtns.addEventListener('click', function(e){
+    if (e.target.matches('img')) {
+      e.target.parentNode.parentNode.classList.toggle('active')
+    }
+    e.target.parentNode.classList.toggle('active')
+  })
+}
